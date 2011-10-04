@@ -1,7 +1,7 @@
 NCacheFacade
 =====
 
-A simple, flexible cache façade for .NET.
+A simple, flexible cache facade for .NET.
 
 Usage:
 --------
