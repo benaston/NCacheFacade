@@ -2,10 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using Extensions;
-    using FluentAssertions;
-    using Logging;
-    using MemcachedProviders.Cache;
     using NBasicExtensionMethod;
     using NSure;
 
@@ -62,7 +58,7 @@
             }
             catch (Exception e)
             {
-                e.Log();
+                throw;
             }
 
             return success;

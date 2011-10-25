@@ -1,4 +1,4 @@
-﻿namespace NCacheFacade
+﻿namespace NCacheFacade.Aop
 {
     using System;
     using System.Threading;

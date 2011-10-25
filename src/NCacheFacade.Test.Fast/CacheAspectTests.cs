@@ -1,4 +1,5 @@
-﻿namespace NCacheFacade.Test.Fast
+﻿// ReSharper disable InconsistentNaming
+namespace NCacheFacade.Test.Fast
 {
     using System;
     using System.Threading;
@@ -6,6 +7,7 @@
     namespace CacheAspectTests
     {
         using NUnit.Framework;
+
 
         public class Given_a_method_decorated_with_a_cache_aspect
         {
@@ -72,3 +74,4 @@
         }
     }
 }
+// ReSharper restore InconsistentNaming

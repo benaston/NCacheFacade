@@ -1,9 +1,9 @@
-﻿namespace NCacheFacade
+﻿namespace NCacheFacade.Aop
 {
     using System;
     using System.Threading;
-    using Extensions;
-    using FluentAssertions;
+    using NBasicExtensionMethod;
+    using NSure;
     using PostSharp.Aspects;
 
     //   0            0      //not in cache, no mutex; start thread
@@ -37,8 +37,8 @@
                                            ICache cache)
         {
             var keyString = key.ToString();
-            Ensure.That<FriendlyExceptions.ArgumentException>(keyString.Length.IsLessThanOrEqualTo(260),
-                                           "key must be less than 260 characters long.");
+            Ensure.That<NHelpfulException.FrameworkExceptions.ArgumentException>(keyString.Length.IsLessThanOrEqualTo(260),
+                                                              "key must be less than 260 characters long.");
 
             try
             {

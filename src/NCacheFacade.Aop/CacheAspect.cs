@@ -1,12 +1,14 @@
-﻿namespace NCacheFacade
+﻿namespace NCacheFacade.Aop
 {
     using System;
     using System.Reflection;
     using Bjma.Utility.Aop;
-    using Extensions;
-    using FluentAssertions;
+    using NBasicExtensionMethod;
+    using NSure;
     using PostSharp.Aspects;
     using PostSharp.Extensibility;
+    using ArgumentException = NHelpfulException.FrameworkExceptions.ArgumentException;
+    using ArgumentNullException = NHelpfulException.FrameworkExceptions.ArgumentNullException;
 
     /// <summary>
     ///   Responsible for providing aspect-oriented 
@@ -55,9 +57,9 @@
                            StorageStyle storageStyle,
                            ExpirationType expirationType)
         {
-            Ensure.That<FriendlyExceptions.ArgumentNullException>(cacheType.IsNotNull(), "cacheType")
-                .And<FriendlyExceptions.ArgumentNullException>(keyCreationStrategyType.IsNotNull(), "keyCreationStrategyType")
-                .And<FriendlyExceptions.ArgumentException>(durationToStoreInSeconds.IsBetween(0, OneYearInSeconds),
+            Ensure.That<ArgumentNullException>(cacheType.IsNotNull(), "cacheType")
+                .And<ArgumentNullException>(keyCreationStrategyType.IsNotNull(), "keyCreationStrategyType")
+                .And<ArgumentException>(durationToStoreInSeconds.IsBetween(0, OneYearInSeconds),
                                         "durationToStoreInSeconds");
 
             _cacheType = cacheType;
@@ -75,12 +77,12 @@
                            Type recalculationStrategyType,
                            int durationToRecalculateInSeconds)
         {
-            Ensure.That<FriendlyExceptions.ArgumentNullException>(cacheType.IsNotNull(), "cacheType")
-                .And<FriendlyExceptions.ArgumentNullException>(keyCreationStrategyType.IsNotNull(), "keyCreationStrategyType")
-                .And<FriendlyExceptions.ArgumentException>(durationToStoreInSeconds.IsBetween(0, OneYearInSeconds),
+            Ensure.That<ArgumentNullException>(cacheType.IsNotNull(), "cacheType")
+                .And<ArgumentNullException>(keyCreationStrategyType.IsNotNull(), "keyCreationStrategyType")
+                .And<ArgumentException>(durationToStoreInSeconds.IsBetween(0, OneYearInSeconds),
                                         "durationToStoreInSeconds")
-                .And<FriendlyExceptions.ArgumentNullException>(recalculationStrategyType.IsNotNull(), "recalculationStrategyType")
-                .And<FriendlyExceptions.ArgumentException>(durationToRecalculateInSeconds.IsBetween(0, durationToStoreInSeconds),
+                .And<ArgumentNullException>(recalculationStrategyType.IsNotNull(), "recalculationStrategyType")
+                .And<ArgumentException>(durationToRecalculateInSeconds.IsBetween(0, durationToStoreInSeconds),
                                         "durationToRecalculateInSeconds");
 
             _cacheType = cacheType;
@@ -98,7 +100,7 @@
         /// </remarks>
         public override void OnInvoke(MethodInterceptionArgs args)
         {
-            Ensure.That<FriendlyExceptions.ArgumentNullException>(args.IsNotNull(), "args");
+            Ensure.That<ArgumentNullException>(args.IsNotNull(), "args");
 
             _cache = (ICache) Activator.CreateInstance(_cacheType);
             _keyCreationStrategy = (IFriendlyNameCreationStrategy) Activator.CreateInstance(_keyCreationStrategyType);

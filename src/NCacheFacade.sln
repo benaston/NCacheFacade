@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade", "NCacheFacade\NCacheFacade.csproj", "{AE284BBB-F5CB-4255-8769-E90E56E8CB8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade.Test.Fast", "NCacheFacade.Test.Fast\NCacheFacade.Test.Fast.csproj", "{3483C25C-6574-40FC-9A9E-D44770793F93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade.Test.Slow", "NCacheFacade.Test.Slow\NCacheFacade.Test.Slow.csproj", "{9539122E-4EA8-4753-A82A-F8A194935884}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade.AspNetDataCache", "NCacheFacade.AspNetDataCache\NCacheFacade.AspNetDataCache.csproj", "{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade.Aop", "NCacheFacade.Aop\NCacheFacade.Aop.csproj", "{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCacheFacade.Memcached", "NCacheFacade.Memcached\NCacheFacade.Memcached.csproj", "{0DF3E024-DCC6-4F05-A343-2C329918ED67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,36 +18,12 @@ Global
 		{AE284BBB-F5CB-4255-8769-E90E56E8CB8B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE284BBB-F5CB-4255-8769-E90E56E8CB8B}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
 		{AE284BBB-F5CB-4255-8769-E90E56E8CB8B}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{3483C25C-6574-40FC-9A9E-D44770793F93}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{9539122E-4EA8-4753-A82A-F8A194935884}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Staging|Any CPU.ActiveCfg = Release|Any CPU
-		{47186AB6-0BF4-4CFC-963A-1C61A2EC5001}.Staging|Any CPU.Build.0 = Release|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Staging|Any CPU.ActiveCfg = Release|Any CPU
 		{E4771D64-AFAF-43D0-B42C-C0E19DFC9748}.Staging|Any CPU.Build.0 = Release|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Staging|Any CPU.ActiveCfg = Release|Any CPU
-		{0DF3E024-DCC6-4F05-A343-2C329918ED67}.Staging|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

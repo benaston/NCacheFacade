@@ -1,7 +1,7 @@
 ﻿namespace NCacheFacade.Test.Slow
 {
     using System;
-    using MemcachedProviders.Cache;
+    using AspNetDataCache;
     using NUnit.Framework;
 
     [TestFixture]
