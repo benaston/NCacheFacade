@@ -39,10 +39,10 @@
       <HintPath>..\packages\NBasicExtensionMethod.1.0.4292.32667\lib\net40\NBasicExtensionMethod.dll</HintPath>
     </Reference>
     <Reference Include="NHelpfulException">
-      <HintPath>..\packages\NHelpfulException.1.0.4292.35244\lib\net40\NHelpfulException.dll</HintPath>
+      <HintPath>..\packages\NHelpfulException.1.0.4322.41274\lib\net40\NHelpfulException.dll</HintPath>
     </Reference>
     <Reference Include="NSure">
-      <HintPath>..\packages\NSure.1.0.4292.35410\lib\net40\NSure.dll</HintPath>
+      <HintPath>..\packages\NSure.1.0.4322.41374\lib\net40\NSure.dll</HintPath>
     </Reference>
     <Reference Include="PostSharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
