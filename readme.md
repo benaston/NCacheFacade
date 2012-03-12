@@ -27,3 +27,8 @@ Usage:
 	//...make use of the object
 	
 ```
+
+License & Copyright
+=====
+
+This software is released under the GNU Lesser GPL. It is Copyright 2012, Ben Aston. I may be contacted at ben@bj.ma.
